@@ -5,7 +5,6 @@ import java.util.List;
 /**
  * Main class for the coin change problem. 
  * @author Jorge Duitama
- *
  */
 public class CoinChangeExample {
 
