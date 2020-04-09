@@ -17,7 +17,7 @@ public class AlgortimoVoraz implements CoinChangeAlgorithm {
 				int i=0;
 				int moneda=0;
 				while(acumulado<=totalValue) {
-					moneda=denominations[i];
+					moneda=denominations[denominations.length-i];
 					if((acumulado+moneda) <= totalValue) {
 						acumulado+=moneda;
 						resp[i]+=1;
