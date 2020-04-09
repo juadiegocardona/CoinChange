@@ -21,7 +21,6 @@ public class AlgoritmoProgramacionDinamica implements CoinChangeAlgorithm {
 					int minimo = 0;
 					minimo = Math.min(matrizCambio[i - 1][j] , matrizCambio[i][j- denominations[i - 1]] + 1);
 					matrizCambio[i][j] = minimo;
-
 				}
 			}
 		}
