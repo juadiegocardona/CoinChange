@@ -11,7 +11,6 @@ public class AlgortimoVoraz implements CoinChangeAlgorithm {
 	@Override
 	public int[] calculateOptimalChange(int totalValue, int[] denominations) {
 		
-			
 				int[] resp=new int[denominations.length];
 				int acumulado=0;
 				int i=0;
