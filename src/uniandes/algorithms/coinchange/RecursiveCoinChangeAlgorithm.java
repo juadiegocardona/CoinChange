@@ -1,5 +1,6 @@
 package uniandes.algorithms.coinchange;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 public class RecursiveCoinChangeAlgorithm implements CoinChangeAlgorithm{
@@ -19,11 +20,11 @@ public class RecursiveCoinChangeAlgorithm implements CoinChangeAlgorithm{
 			return monedas;
 		}
 
-		for (int i=denominations.length-1;i>0;i--) {
+		for (int i=denominations.length-1;i>=0;i--) {
 			if((totalValue-denominations[i])>=0) {
-				int temporal=totalValue-denominations[i];
+				totalValue-=denominations[i];
 				monedas[i]+=1;
-				return returnChange(temporal, denominations, monedas);
+				return returnChange(totalValue, denominations, monedas);
 			}
 		}
 

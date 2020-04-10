@@ -22,6 +22,7 @@ public class CoinChangeExample {
 		//Load algorithm class
 		String algorithmClassName = CoinChangeExample.class.getPackage().getName()+"."+args[0]+"CoinChangeAlgorithm";
 		CoinChangeAlgorithm calculator = (CoinChangeAlgorithm)Class.forName(algorithmClassName).newInstance();
+		System.out.println("Coin Change Algorithm: "+args[0]);
 		//Load input data
 		int totalValue = Integer.parseInt(args[1]);
 		String [] strDenominations = args[2].split(",");

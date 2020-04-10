@@ -11,7 +11,7 @@ public class DynamicProgrammingCoinChangeAlgorithm implements CoinChangeAlgorith
 			matrizCambio[i][0] = 0;
 
 		for (int j = 1; j <= totalValue; j++)
-			matrizCambio[0][j] = 99;
+			matrizCambio[0][j] = Integer.MAX_VALUE;
 
 		for (int i = 1; i <= denominations.length; i++) 
 		{

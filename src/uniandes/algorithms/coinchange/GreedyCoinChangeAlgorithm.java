@@ -15,7 +15,7 @@ public class GreedyCoinChangeAlgorithm implements CoinChangeAlgorithm {
 				int acumulado=0;
 				int i=denominations.length-1;
 				int moneda=0;
-				while(acumulado<=totalValue && i>0) {
+				while(acumulado<=totalValue && i>=0) {
 					moneda=denominations[i];
 					if((acumulado+moneda) <= totalValue) {
 						acumulado+=moneda;
