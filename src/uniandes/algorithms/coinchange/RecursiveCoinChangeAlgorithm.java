@@ -1,7 +1,5 @@
 package uniandes.algorithms.coinchange;
 
-import java.math.BigInteger;
-import java.util.ArrayList;
 
 public class RecursiveCoinChangeAlgorithm implements CoinChangeAlgorithm{
 
