@@ -1,9 +1,10 @@
 package uniandes.algorithms.coinchange;
 
-public class AlgoritmoProgramacionDinamica implements CoinChangeAlgorithm {
+public class DynamicProgrammingCoinChangeAlgorithm implements CoinChangeAlgorithm {
 
 	@Override
 	public int[] calculateOptimalChange(int totalValue, int[] denominations) {
+		
 		int[][] matrizCambio = new int[denominations.length + 1][totalValue + 1];
 
 		for (int i = 0; i < denominations.length; i++)

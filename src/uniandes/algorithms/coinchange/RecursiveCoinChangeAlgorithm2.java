@@ -1,6 +1,6 @@
 package uniandes.algorithms.coinchange;
 
-public class AlgoritmoRecursivo2 implements CoinChangeAlgorithm {
+public class RecursiveCoinChangeAlgorithm2 implements CoinChangeAlgorithm {
 
 	/**
 	 * las denominaciones deben de estar de mayor a menor

@@ -1,6 +1,6 @@
 package uniandes.algorithms.coinchange;
 
-public class AlgortimoVoraz implements CoinChangeAlgorithm {
+public class GreedyCoinChangeAlgorithm implements CoinChangeAlgorithm {
 
 	/**
 	 * las denominaciones deben de estar de mayor a menor
@@ -13,16 +13,16 @@ public class AlgortimoVoraz implements CoinChangeAlgorithm {
 		
 				int[] resp=new int[denominations.length];
 				int acumulado=0;
-				int i=0;
+				int i=denominations.length-1;
 				int moneda=0;
-				while(acumulado<=totalValue) {
-					moneda=denominations[denominations.length-i];
+				while(acumulado<=totalValue && i>0) {
+					moneda=denominations[i];
 					if((acumulado+moneda) <= totalValue) {
 						acumulado+=moneda;
 						resp[i]+=1;
 					}
 					else {
-						i++;
+						i--;
 					}
 				}
 				return resp;
