@@ -12,22 +12,22 @@ public class RecursiveCoinChangeAlgorithm implements CoinChangeAlgorithm{
 	}
 
 
-	public int[] returnChange(int totalValue, int[] denominations,int[] monedas) {
+	public int[] returnChange(int totalValue, int[] denominations,int[]monedas) {
+		int[]resp=new int[denominations.length];
 
 		if(totalValue==0) {
 			return monedas;
 		}
 
-		int c=0;
 		for (int i=denominations.length-1;i>0;i--) {
-			c=denominations[i];
-			if((totalValue-c)>0) {
-				int temporal=totalValue-c;
+			if((totalValue-denominations[i])>=0) {
+				int temporal=totalValue-denominations[i];
 				monedas[i]+=1;
 				return returnChange(temporal, denominations, monedas);
 			}
 		}
-		return monedas;
+
+		return resp;
 	}
 
 
